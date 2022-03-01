@@ -2,7 +2,9 @@
 var generateBtn = document.querySelector("#generate");
 var cardbody = document.querySelector("#password");
 
-
+function promptWindows (){
+  alert ("Welcome to the Password Generator")
+  }
  
 
 // Write password to the #password input
