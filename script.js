@@ -2,7 +2,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var inputPasswordEl = document.querySelector("#password");
+var passwordInput = "";
+var newArray = "";
 
+
+
+//research indexes more. how is this stored in functions?
 var pCriteria = {
   lowercase: { indexNumber: 0 , criteria: "abcdefghijklmnopqrstuvwxyz"
   },
@@ -16,21 +21,57 @@ var pCriteria = {
 
  window.alert("Welcome to the password generator! Click 'Ok', then click 'Generate Password' to get started");
 
-   
+var passGenerator = function() { 
 
- 
+ var passwordInput = "";
+ var newArray = "";
     
  var trueInput = true; 
 
  while(trueInput) /* triggers window Pop up */
 
- passwordInput = window.prompt("Type 'symbols' for a symbol based password. Type 'numbers' for a number based password");
+ passwordInput = window.prompt("YOU NEED A NEW PASSWORD, YOU HAVE COME TO THE RIGHT PLACE. INPUT YOUR CRITERIA!");
 
  if (!passwordInput) {
        newPassword();
  } else if (passwordInput) {
-   
- }
+               /* Requires valid input from user */
+  passwordInput = passwordInput.split("");
+  newArray = passwordInput.slice(0,userInput.length);
+
+   window.alert("SO, YOU HAVE CHOSEN:" + newArray);
+
+   trueInput = false;
+
+    //Is a for loop optional here?
+    //research .length and indexes, arrays. is this considered an array or index?
+
+    for (var i =0; i < passwordInput.length; i++) {
+     
+      var charCriteria = passwordInput[i];
+      //is this assigning the index to the passwordInput with the use of [i]?
+      var charCriteriaI = parseInt(charCriteria);
+      //research parse
+
+      switch(charCriteriaI) { //research more about switch and what case means
+        case 1:
+          case 2:
+            case 3:
+              case 4:
+
+              break; //research break
+
+              
+      }
+
+    }
+
+ } 
+}
+
+function passWordLimit () { /*how long the password should be?
+
+}
 
  /*
 // Write password to the #password input
@@ -95,5 +136,5 @@ generateBtn.addEventListener("click", writePassword);
 cardbody.addEventListener("click", generatePassword);
 
 
-  
+} 
 
